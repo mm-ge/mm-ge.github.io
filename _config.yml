@@ -14,10 +14,9 @@ title_plain              : "MMGe"   # 纯文本版本，用于 feed、meta、页
 title_separator          : "-"
 name                     : &name "MMGe"
 description              : &description "Hello world"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://mm-ge.github.io # Change to "https://[your GitHub username].github.io" for user site,
-                                                           # or "https://[your GitHub username].github.io/HomePage" for project site
-baseurl                  : "" # Use "" for user site, or "/HomePage" for project site
-repository               : "mm-ge/mm-ge.github.io" # Change to your GitHub username/repo
+url                      : https://mm-ge.github.io
+baseurl                  : ""
+repository               : "mm-ge/mm-ge.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.

@@ -22,4 +22,4 @@ package-lock.json
 # Ignore files created by MacOS
 .DS_Store
 
-README-HomePage.md
+README.md

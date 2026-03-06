@@ -1,0 +1,52 @@
+/* 统一 masthead、#main、footer 的 max-width */
+$content-max-width: 90%;
+$content-max-width-wide: 1500px;
+.masthead__inner-wrap {
+  @include breakpoint($x-large) {
+    max-width: $content-max-width;
+  }
+  @include breakpoint(1600px) {
+    max-width: $content-max-width-wide;
+  }
+}
+
+#main {
+  @include breakpoint($x-large) {
+    max-width: $content-max-width;
+  }
+  @include breakpoint(1600px) {
+    max-width: $content-max-width-wide;
+  }
+}
+
+.page__footer footer {
+  @include breakpoint($x-large) {
+    max-width: $content-max-width;
+  }
+  @include breakpoint(1600px) {
+    max-width: $content-max-width-wide;
+  }
+}
+
+/* 仅减少右侧留白，不侵占侧边栏空间 */
+.page {
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
+    @include suffix(0.5 of 12);
+  }
+}
+
+/* 正文两端对齐，末行左对齐 */
+.page__content {
+  text-align: justify;
+  text-align-last: left;
+}
+
+/* 侧边栏与主页标题中心对齐：调整标题位置使其与侧边栏作者区垂直居中 */
+.page .page__inner-wrap > header {
+  @include breakpoint($large) {
+    padding-top: 1.5rem;
+  }
+}
+

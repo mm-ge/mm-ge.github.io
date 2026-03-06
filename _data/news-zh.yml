@@ -1,0 +1,11 @@
+# 新闻动态（中文），按时间倒序排列（最新在前）
+# 字段：date(必填), text(必填，支持 Markdown：**加粗**、*斜体*、[链接](url)）
+# 可选：url(链接), icon(Font Awesome 如 fa-star), icon_color(图标颜色), bold(true), color(文字颜色)
+# - date: 2025-03-01
+#   text: "欢迎访问学术[主页](https://doi.org/10.1145/3652032.3657577)"
+#   bold: true
+- date: 2024-09-01
+  text: "获得哈尔滨工业大学计算机科学与技术博士学位"
+  icon: "fa-graduation-cap"
+  icon_color: "#0066cc"
+  color: "#0066cc"

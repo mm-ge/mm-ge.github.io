@@ -1,0 +1,11 @@
+# News (English), newest first
+# Fields: date(required), text(required, Markdown supported)
+# Optional: url, icon, icon_color, bold, color
+# - date: 2025-03-01
+#   text: "Welcome to my academic [homepage](https://doi.org/10.1145/3652032.3657577)"
+#   bold: true
+- date: 2024-09-01
+  text: "Received Ph.D. in Computer Science from Harbin Institute of Technology"
+  icon: "fa-graduation-cap"
+  icon_color: "#0066cc"
+  color: "#0066cc"

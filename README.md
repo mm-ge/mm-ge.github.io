@@ -1,96 +1,273 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Mengmeng Ge - 学术主页
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
-
-# Getting Started
-
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-### Using the DevContainer in VS Code
-
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+基于 [Academic Pages](https://github.com/academicpages/academicpages.github.io) 模板、Jekyll 构建的学术个人主页。内容已根据 [ORCID 0000-0001-6912-6152](https://orcid.org/0000-0001-6912-6152) 信息初始化。
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## 一、部署到 GitHub Pages
+
+### 方式 A：用户站点（推荐）
+
+若希望网站地址为 `https://你的用户名.github.io`：
+
+1. 在 GitHub 创建新仓库，**仓库名必须**为：`你的用户名.github.io`
+2. 将本项目代码推送到该仓库
+3. 在 `_config.yml` 中修改：
+   ```yaml
+   url: https://你的用户名.github.io
+   baseurl: ""
+   repository: "你的用户名/你的用户名.github.io"
+   ```
+4. 仓库 **Settings → Pages** 中选择 `main` 分支，保存后等待构建
+
+### 方式 B：项目站点
+
+若希望网站地址为 `https://你的用户名.github.io/HomePage`：
+
+1. 在 GitHub 创建名为 `HomePage` 的仓库
+2. 推送代码后，在 `_config.yml` 中修改：
+   ```yaml
+   url: https://你的用户名.github.io
+   baseurl: "/HomePage"
+   repository: "你的用户名/HomePage"
+   ```
+3. **Settings → Pages** 中 Source 选择 `Deploy from a branch`，Branch 选 `main`，路径选 `/ (root)`
+
+---
+
+## 二、本地预览
+
+```bash
+# 安装依赖
+bundle install
+
+# 启动本地服务器（访问 http://localhost:4000）
+bundle exec jekyll serve -l -H localhost
+```
+
+修改 `_config.yml` 后需重启 Jekyll 才能生效。
+
+---
+
+## 三、内容管理指南
+
+### 主页配置位置速查
+
+| 配置项 | 文件路径 | 说明 |
+|--------|----------|------|
+| **首页正文** | `_pages/about.md` | 含 `permalink: /`，即网站首页。修改简介、About、Research Interests、News 等在此 |
+| **站点级配置** | `_config.yml` | 站点标题、描述、URL；`author` 块控制侧边栏个人信息（姓名、bio、邮箱、ORCID、GitHub 等） |
+| **顶部导航** | `_data/navigation.yml` | 顶部栏目及其顺序 |
+| **新闻动态** | `_data/news.yml`（英文）、`_data/news-zh.yml`（中文） | 首页 News 板块，可切换语言 |
+
+### 1. 个人信息（侧边栏）
+
+编辑 **`_config.yml`** 中 `author` 部分：
+
+| 字段 | 说明 |
+|------|------|
+| `name` | 显示姓名 |
+| `bio` | 简短个人介绍 |
+| `email` | 邮箱 |
+| `location` | 所在地 |
+| `employer` | 当前单位 |
+| `orcid` | ORCID 链接 |
+| `googlescholar` | Google Scholar 链接 |
+| `github` | GitHub 用户名 |
+| `avatar` | 头像图片名，放在 `images/` 目录 |
+
+### 2. 添加 / 修改论文（Publications）
+
+在 **`_publications/`** 目录下新建 Markdown 文件，文件名格式：`YYYY-MM-DD-简短标题.md`
+
+```markdown
+---
+title: "论文标题"
+collection: publications
+category: manuscripts   # 或 conferences（会议论文）
+permalink: /publication/文件名-不含扩展名
+excerpt: '一句话摘要'
+date: 2024-06-20
+venue: '期刊/会议名称'
+paperurl: 'https://doi.org/xxx'
+citation: 'Ge, M. (2024). &quot;论文标题.&quot; <i>期刊名</i>.'
+---
+
+[Download paper here](论文链接)
+
+（可在此补充详细描述）
+```
+
+- **category**：`manuscripts` = 期刊，`conferences` = 会议
+- **date**：用于排序，越新越靠前
+
+### 3. 添加 / 修改演讲（Talks）
+
+在 **`_talks/`** 目录下新建 `YYYY-MM-DD-标题.md`：
+
+```markdown
+---
+title: "演讲标题"
+permalink: /talk/2024-03-01-talk-title
+date: 2024-03-01
+venue: "会议/机构名称"
+location: "城市, 国家"
+---
+```
+
+### 4. 添加 / 修改教学经历（Teaching）
+
+在 **`_teaching/`** 目录下新建 Markdown 文件。
+
+### 5. 修改首页 / 关于页
+
+- **`_pages/about.md`**：首页内容（`permalink: /`）
+- 修改标题、简介、研究兴趣等直接编辑该文件
+
+### 6. 修改 CV 简历页
+
+- **`_pages/cv.md`**：简历 Markdown 内容
+- **`_data/cv.json`**：JSON 版简历数据（用于 `/cv-json/` 等页面）
+
+### 7. 顶部导航栏的增删改
+
+编辑 **`_data/navigation.yml`** 控制顶部栏目的显示。
+
+**删除栏目**：删除对应项，或用 `#` 注释掉。
+
+```yaml
+main:
+  - title: "Publications"
+    url: /publications/
+  # - title: "Talks"          # 注释后该栏目不显示
+  #   url: /talks/
+  - title: "Teaching"
+    url: /teaching/
+```
+
+**增加栏目**：在 `main:` 下新增一项，格式如下：
+
+```yaml
+  - title: "栏目显示名称"
+    url: /目标路径/
+```
+
+- `url` 以 `/` 开头，项目站点会自动加上 `baseurl`
+- 对应页面需在 `_pages/` 或相应 collection 中存在，否则点击会 404
+
+**调整顺序**：直接修改文件中各项的先后顺序即可。
+
+### 8. News 板块（首页新闻动态）
+
+- **`_data/news.yml`**：英文新闻（默认显示）
+- **`_data/news-zh.yml`**：中文新闻（点击「中文」切换）
+- 首页 News 旁有 **English | 中文** 切换，选择会保存到本地
+
+每条新闻支持以下字段：
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| `date` | ✓ | 日期 YYYY-MM-DD |
+| `text` | ✓ | 内容，支持 Markdown：`**加粗**`、`*斜体*`、`[链接](url)` |
+| `url` | | 点击跳转链接 |
+| `icon` | | Font Awesome 图标，如 `fa-bullhorn`、`fa-graduation-cap`、`fa-file-alt` |
+| `icon_color` | | 图标颜色，如 `#0066cc`、`#c00` |
+| `bold` | | `true` 时整条加粗 |
+| `color` | | CSS 颜色，如 `#0066cc`、`red` |
+
+```yaml
+- date: 2025-03-01
+  text: "**重要** 新闻内容"
+  icon: "fa-star"
+  bold: true
+  color: "#c00"
+  url: https://example.com
+```
+
+---
+
+## 四、修改后如何生成与发布
+
+### 本地生成与预览
+
+```bash
+# 本地构建（输出到 _site/ 目录）
+bundle exec jekyll build
+
+# 本地启动服务并实时预览（修改 Markdown 会自动刷新）
+bundle exec jekyll serve -l -H localhost
+# 浏览器访问 http://localhost:4000
+```
+
+- 修改 `.md`、`.html` 文件后，`jekyll serve` 会自动重建
+- 修改 `_config.yml` 后需**重启** `jekyll serve` 才能生效
+
+### 发布到线上（GitHub Pages）
+
+1. **提交并推送**：
+   ```bash
+   git add .
+   git commit -m "描述本次修改"
+   git push origin main
+   ```
+
+2. **自动构建**：推送到 GitHub 后，GitHub Actions 会自动构建并部署
+   - 在仓库 **Actions** 标签页可查看构建状态
+   - 通常 1–3 分钟后网站更新
+
+3. **在网页端修改**：也可在 GitHub 网页上编辑文件，保存后会自动触发构建
+
+---
+
+## 五、从 ORCID 同步论文
+
+当前论文列表已根据 ORCID 记录手动导入。后续新增论文可：
+
+1. **手动添加**：按第二节方法在 `_publications/` 新建对应 Markdown
+2. **半自动**：使用 `markdown_generator/` 中的脚本：
+   - 将 ORCID 导出的 BibTeX 放到 `files/` 或项目根目录
+   - 运行 `markdown_generator/pubsFromBib.py` 或对应 Jupyter 笔记本生成 Markdown
+
+---
+
+## 六、文件结构说明
+
+```
+HomePage/
+├── _config.yml          # 站点配置（标题、作者、链接等）
+├── _data/
+│   ├── navigation.yml   # 顶部导航
+│   ├── news.yml         # 首页 News（英文）
+│   ├── news-zh.yml      # 首页 News（中文）
+│   └── cv.json          # CV JSON 数据
+├── _pages/              # 固定页面（about、cv 等）
+├── _publications/       # 论文
+├── _talks/              # 演讲
+├── _teaching/           # 教学
+├── _posts/              # 博客文章
+├── images/              # 图片（含 profile.png 头像）
+├── files/               # 可下载文件（如 PDF）
+└── markdown_generator/  # 批量生成 Markdown 的脚本
+```
+
+---
+
+## 七、常见问题
+
+**Q: 修改后网站没有更新？**  
+GitHub Pages 构建需要几分钟，可在仓库 **Actions** 中查看构建状态。
+
+**Q: 如何更换主题？**  
+在 `_config.yml` 中修改 `site_theme`，可选：`default`, `air`, `sunrise`, `mint`, `dirt`, `contrast`。
+
+**Q: 如何添加头像？**  
+将头像图片命名为 `profile.png` 放到 `images/` 目录。
+
+---
+
+## 八、参考链接
+
+- [Academic Pages 官方文档](https://academicpages.github.io/)
+- [Jekyll 文档](https://jekyllrb.com/docs/)
+- [GitHub Pages 文档](https://docs.github.com/pages)
+- [ORCID 档案](https://orcid.org/0000-0001-6912-6152)

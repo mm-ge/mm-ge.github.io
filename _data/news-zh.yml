@@ -4,6 +4,11 @@
 # - date: 2025-03-01
 #   text: "欢迎访问学术[主页](https://doi.org/10.1145/3652032.3657577)"
 #   bold: true
+- date: 2026-02-01
+  text: "加入新加坡管理大学（SMU），任研究员（Research Fellow）"
+  icon: "fa-briefcase"
+  icon_color: "#0066cc"
+  color: "#0066cc"
 - date: 2024-09-01
   text: "获得哈尔滨工业大学计算机科学与技术博士学位"
   icon: "fa-graduation-cap"

@@ -14,7 +14,7 @@ title_plain              : "MMGe"   # 纯文本版本，用于 feed、meta、页
 title_separator          : "-"
 name                     : &name "MMGe"
 description              : &description "Hello world"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://mm-ge.github.io
+url                      : https://mengmeng.ge
 baseurl                  : ""
 repository               : "mm-ge/mm-ge.github.io"
 
